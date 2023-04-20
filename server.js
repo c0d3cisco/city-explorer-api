@@ -76,6 +76,16 @@ app.get('/movie', async (req, res, next) => {
     }   
 });
 
+
+app.get('/test', async (req, res, next) => {
+    try{
+        res.status(200).send('this server is working... the issue is your API key');
+    }
+    catch(error){
+       next(error)
+    }   
+});
+
 //TODO: define my photo class and info I want to render to the 
 
 // *** CLASS TO GROOM BUILKY DATA ***
